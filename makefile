@@ -1,5 +1,5 @@
 CC=/usr/bin/g++
-CFLAGS= -g -std=c++11
+CFLAGS= -g -std=c++11 -Wall
 
 OBJS=array          \
      bitset         \

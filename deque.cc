@@ -4,8 +4,12 @@
 
 void print(std::deque<int> d)
 {
-  for (auto it = d.begin(); it != d.end(); it++)
-    std::cout << (*it) << " ";
+//  Replace old for loop with range-based for loop
+//  for (auto it = d.begin(); it != d.end(); it++)
+//    std::cout << (*it) << " ";
+
+  for (auto elem: d)
+    std::cout << elem << " ";
   std::cout << std::endl;
 }
 
@@ -61,7 +65,7 @@ int main()
   std::cout << "The 25th element = " << d[24] << std::endl;
   std::cout << "Use the at function to retrieve the 25th element" << std::endl;
   try {
-    std::cout << "The 25th element is " << d.at(25) << std::cout; 
+    std::cout << "The 25th element is " << d.at(25) << std::endl; 
   } catch (std::exception &e) {
     std::cout << "There is no 25th element" << std::endl;
   }

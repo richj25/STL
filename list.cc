@@ -77,8 +77,12 @@ void print(const std::list<Myclass> &myclasslist)
 {
   std::cout << std::setiosflags(std::ios::left);
   std::cout << "Print out the numbers and strings contained in the objects in the vector" << std::endl;
-  for (std::list<Myclass>::const_iterator iter = myclasslist.begin(); iter != myclasslist.end(); iter++)
-    std::cout << std::setw(6) << (*iter).n << " ";
+// Replace the old familiar for loop with range-based for loop
+//  for (std::list<Myclass>::const_iterator iter = myclasslist.begin(); iter != myclasslist.end(); iter++)
+//    std::cout << std::setw(6) << (*iter).n << " ";
+
+   for (auto elem: myclasslist)
+     std::cout << std::setw(6) << elem.n << " ";
   std::cout << std::endl;
 
   // the for loop is more readable if you use auto

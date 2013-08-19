@@ -4,8 +4,11 @@
 template <class T>
 void print(const T container)
 {
-  for (typename T::const_iterator it = container.cbegin(); it != container.cend(); it++)
-    std::cout << *it << " ";
+//  replace the old familiar for loop with range-base for loop
+//  for (typename T::const_iterator it = container.cbegin(); it != container.cend(); it++)
+//    std::cout << *it << " ";
+  for (auto elem : container)
+    std::cout << elem << " ";
   std::cout << std::endl;
 }
 
@@ -18,6 +21,7 @@ int main()
 
   print(a);
 
+  std::cout << "Now fill the array with 0-9 " << std::endl;
   for (int i = 0; i < 10; i++)
     a[i] = i;
 
