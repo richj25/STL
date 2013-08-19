@@ -31,6 +31,7 @@ int main()
 
   try {
     auto it = a.at(15); 
+    std::cout << "Entry 15 contains " << it << std::endl;
   } catch (std::exception &e) {
     std::cout << "There is no entry 15" << std::endl;
   }
